@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UserInfoInputForm from "./components/UserInfoInputForm";
+import UserList from "./components/UserList";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -7,10 +8,10 @@ function App() {
   const addUserHandler = (user) => {
     setUsers((addUser) => addUser.concat(user));
   };
-  console.log(users);
   return (
     <div className="app">
       <UserInfoInputForm onAddUser={addUserHandler} />
+      {users.length > 0 && <UserList list={users} />}
     </div>
   );
 }
