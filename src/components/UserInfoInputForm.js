@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import styles from "./UserInfoInputForm.module.css";
+import Button from "../UI/button/Button";
 
 const UserInfoInputForm = ({ onAddUser }) => {
   const [userName, setUserName] = useState("");
@@ -35,7 +36,7 @@ const UserInfoInputForm = ({ onAddUser }) => {
       />
       <label>Age (Years)</label>
       <input type="text" value={age} onChange={ageChangeHandler} />
-      <button type="submit">Add User</button>
+      <Button type="submit" value="Add User" />
     </form>
   );
 };
