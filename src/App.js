@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import UserInfoInputForm from "./components/Users/UserInfoInputForm";
-import UserList from "./components/Users/UserList";
-import Alert from "./UI/alert/Alert";
+// import UserInfoInputForm from "./components/Users/UserInfoInputForm";
+// import UserList from "./components/Users/UserList";
+// import Alert from "./UI/alert/Alert";
+import AddUser from "./components/Users/AddUser";
 
+/* 내가 작성한 코드
 function App() {
   const [users, setUsers] = useState([]);
   const [invalid, setInvalid] = useState(false);
@@ -30,6 +32,15 @@ function App() {
         {users.length > 0 && <UserList list={users} />}
       </div>
       {invalid && alertContent}
+    </div>
+  );
+}
+*/
+
+function App() {
+  return (
+    <div>
+      <AddUser />
     </div>
   );
 }
