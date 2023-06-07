@@ -4,11 +4,13 @@
 
 html {
   font-family: sans-serif;
+  background: #1f1f1f;
 }
 
 body {
   margin: 0;
 }
+/* 내가 작성한 코드
 .card {
   background: white;
   border-radius: 10px;
@@ -31,3 +33,5 @@ body {
 li {
   list-style-type: none;
 }
+ */
+
