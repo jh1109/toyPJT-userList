@@ -2,23 +2,9 @@ import React from "react";
 
 import styles from "./Button.module.css";
 
-const Button = ({
-  className,
-  type,
-  value,
-  onClick = (boolean) => {
-    return;
-  },
-}) => {
-  const closeBtnHandler = () => {
-    onClick(false);
-  };
+const Button = ({ className, type, value }) => {
   return (
-    <button
-      className={`${styles.button} ${className}`}
-      type={type}
-      onClick={closeBtnHandler}
-    >
+    <button className={`${styles.button} ${className}`} type={type}>
       {value}
     </button>
   );
