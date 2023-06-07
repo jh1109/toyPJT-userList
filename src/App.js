@@ -26,6 +26,7 @@ function App() {
         <Alert
           title="Invalid input"
           content="Please enter a valid name and age (non-empty values)."
+          onClose={alertHandler}
         />
       )}
     </div>
