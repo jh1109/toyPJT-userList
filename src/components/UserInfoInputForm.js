@@ -17,7 +17,14 @@ const UserInfoInputForm = ({ onAddUser, onInvalid }) => {
   const addUserHandler = (e) => {
     e.preventDefault();
     if (userName.trim().length === 0 || age.trim().length === 0) {
-      onInvalid(true);
+      onInvalid(
+        "Invalid input",
+        "Please enter a valid name and age (non-empty values)."
+      );
+      return;
+    }
+    if (age < 0) {
+      onInvalid("Invalid input", "Please enter a valid age (>0).");
       return;
     }
     const user = { id: Math.random().toString(), name: userName, age: +age };
