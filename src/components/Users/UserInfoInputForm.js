@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
+import Button from "../UI/button/Button";
 
 import styles from "./UserInfoInputForm.module.css";
-import Button from "../UI/button/Button";
 
 const UserInfoInputForm = ({ onAddUser, onInvalid }) => {
   const [userName, setUserName] = useState("");

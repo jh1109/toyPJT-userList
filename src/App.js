@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import UserInfoInputForm from "./components/UserInfoInputForm";
-import UserList from "./components/UserList";
+import UserInfoInputForm from "./components/Users/UserInfoInputForm";
+import UserList from "./components/Users/UserList";
 import Alert from "./UI/alert/Alert";
 
 function App() {
