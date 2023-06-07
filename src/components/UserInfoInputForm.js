@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import styles from "./UserInfoInputForm.module.css";
 import Button from "../UI/button/Button";
 
-const UserInfoInputForm = ({ onAddUser }) => {
+const UserInfoInputForm = ({ onAddUser, onInvalid }) => {
   const [userName, setUserName] = useState("");
   const [age, setAge] = useState("");
   const userNameInputEl = useRef(null);
@@ -16,6 +16,10 @@ const UserInfoInputForm = ({ onAddUser }) => {
   };
   const addUserHandler = (e) => {
     e.preventDefault();
+    if (userName.trim().length === 0 || age.trim().length === 0) {
+      onInvalid(true);
+      return;
+    }
     const user = { id: Math.random().toString(), name: userName, age: +age };
     onAddUser(user);
     setUserName("");
