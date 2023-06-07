@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // import UserList from "./components/Users/UserList";
 // import Alert from "./UI/alert/Alert";
 import AddUser from "./components/Users/AddUser";
+import UsersList from "./components/Users/UsersList";
 
 /* 내가 작성한 코드
 function App() {
@@ -41,6 +42,7 @@ function App() {
   return (
     <div>
       <AddUser />
+      <UsersList users={[]} />
     </div>
   );
 }
